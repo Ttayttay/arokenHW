@@ -1,0 +1,201 @@
+:root {
+	--general-text: #312c27;
+	--accent-text: #1f1711;
+	--general-bg: #fff9f4;
+	--accent-color: #ffa55c;
+	--accent-color-2: #ceaad0;
+	--accent-bg: #ffe0cb;
+	--transition: all .4s;
+	--border-radius: 20px;
+	--input-color: #ac907a;
+}
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 5vw;
+}
+
+
+.body {
+	font-family: "Montserrat", "Arial", sans-serif;
+	line-height: 1.5;
+	color: var(--general-text);
+	background: var(--general-bg);
+}
+
+.wrapper {
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.body--opened-menu {
+	overflow: hidden;
+}
+
+.body--opened-modal {
+	overflow: hidden;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.main__program,
+.main__gallery,
+.main__testimonials {
+	padding-bottom: 145px;
+}
+
+.main__about {
+	padding: 140px 0;
+}
+
+.container {
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 15px;
+	height: 100%;
+}
+
+.title {
+	font-family: "Gabriola";
+	font-size: 72px;
+	line-height: 0.82;
+	color: var(--accent-text);
+}
+
+.button {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 64px;
+	padding: 3px 15px;
+	background: var(--accent-color);
+	border-radius: 60px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.6;
+
+	transition: all 0.4s;
+}
+
+.button:hover {
+	background: #ff9138;
+}
+
+.modal {
+	position: fixed;
+	inset: 0;
+	background: #00000071;
+	z-index: 10;
+	padding: 15px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: var(--transition);
+}
+
+.body--opened-modal .modal{
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal__window {
+	background: var(--general-bg);
+	border-radius: var(--border-radius);
+	padding: 0 60px 60px;
+	position: relative;
+	max-width: 428px;
+}
+
+.modal__cancel {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.modal__cancel path,
+.modal__cancel rect {
+	transition: var(--transition);
+}
+
+.modal__cancel:hover path,
+.modal__cancel:hover rect {
+	stroke: var();
+}
+
+.modal__img {
+	margin: -65px 0 15px 13 px;
+	max-width: 100%;
+}
+
+.modal__title {
+	color: var(--accent-text);
+}
+
+.modal__text {
+	margin-bottom: 30px;
+}
+
+.modal__form-lable {
+	margin-bottom: 10px;
+}
+
+.field {
+	position: relative;
+	display: block;
+}
+.field span {
+	position: absolute;
+	top: 12px;
+	left: 29px;
+	font-size: 11px;
+	color: var(--input-color);
+	min-width: 86px;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: var(--transition) ;
+}
+
+.field__input {
+	display: block;
+	width: 100%;
+	border-radius: 100px;
+	border: 1px solid var(--input-color);
+	background: #00000000;
+	padding: 19px 42px 19px 28px;
+	font-size: 16px;
+	margin-bottom: 10px;
+	transition: var(--transition);
+}
+
+.field__input:hover {
+	border-color:var(--accent-color);
+}
+
+.field__input::placeholder {
+	color: var(--input-color);
+	transition: var(--transition);
+}
+
+.field__input:hover::placeholder {
+	color: var(--accent-color);
+}
+
+.field__input:focus {
+	padding: 26px 42px 12px 28px;
+}
+
+.field__input:focus + span {
+	opacity: 1;
+	visibility: visible;
+}
