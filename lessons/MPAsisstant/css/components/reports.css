@@ -1,0 +1,124 @@
+.reports {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.reports__title {
+  margin-bottom: 28px;
+}
+
+.reports__subtitle {
+  color: var(--md-dark);
+  display: inline-block;
+  margin-bottom: 34px;
+}
+
+.reports__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.reports__list {
+  max-width: 782px;
+}
+
+.reports__item {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 27px 41px 37px;
+  width: 100%;
+  background-color: var(--ligth-secondary);
+}
+
+.reports__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.reports__item-svg {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  transform: translateY(4px);
+  fill: var(--secondary);
+}
+
+.reports__item-text {
+  padding-left: 15px;
+  font-size: clamp(1rem, 0.85rem + 0.65vw, 1.625rem);
+  color: var(--dark);
+}
+
+.reports__img-block {
+  max-width: 690px;
+  min-width: 570px;
+}
+
+.reports__img-block img {
+  width: 100%;
+}
+.reports__img-block-sm img {
+  display: none;
+}
+
+/* ================================= */
+@media (max-width: 1250px) {
+  .reports__list {
+    width: calc(52% - 15px);
+  }
+}
+@media (max-width: 1050px) {
+  .reports__block {
+    flex-direction: column;
+  }
+  .reports__list {
+    max-width: 100%;
+  }
+  .reports__list {
+    width: auto;
+  }
+}
+@media (max-width: 780px) {
+  .reports {
+    padding-top: 40px;
+    padding-bottom: 37px;
+  }
+}
+@media (max-width: 600px) {
+  .reports__img-block img {
+    display: none;
+  }
+  .reports__img-block-sm img {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media (max-width: 540px) {
+  .reports__title {
+    margin-bottom: 10px;
+  }
+  .reports__subtitle {
+    margin-bottom: 26px;
+  }
+  .reports__block {
+    align-items: center;
+    gap: 41px;
+  }
+  .reports__item {
+    padding: 21px 20px 22px;
+  }
+  .reports__item:not(:last-child) {
+    margin-bottom: 11px;
+  }
+  .reports__item-svg {
+    width: 20px;
+    height: 20px;
+    transform: none;
+  }
+  .reports__item-text {
+    padding-left: 8px;
+  }
+}

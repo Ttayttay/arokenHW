@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "NT Somic";
+    src: url("../fonts/NTSomic-Regular.woff2") format("woff2"),
+      url("../fonts/NTSomic-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "NT Somic Bold";
+    src: url("../fonts/NTSomic-Bold.woff2") format("woff2"),
+      url("../fonts/NTSomic-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  

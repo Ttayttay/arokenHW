@@ -1,0 +1,49 @@
+.header__statistic{
+    margin-top: 100px;
+}
+.header__statistic-inner{
+    padding: 50px 43px;
+    width: 100%;
+    background: var(--md-secondary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.header__statistic-block-number{
+    font-family: "NT Somic Bold";
+    color: var(--secondary);
+    font-size: 70px;
+}
+.header__statistic-block-text{
+    color: var(--md-dark);
+    max-width: 100%;
+    font-size: 22px;
+}
+
+/* ======================= */
+/* ==== МЕДИА ЗАПРОСЫ ==== */
+/* ======================= */
+
+@media (max-width: 1400px) {
+    .header__statistic-inner{
+        padding: 40px 20px;
+    }
+    .header__statistic-block-number{
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 830px) {
+    .header__statistic{
+        margin-top: 30px;
+    }
+    .header__statistic-inner{
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+    .header__statistic-block-text{
+        font-size: 16px;
+    }
+}

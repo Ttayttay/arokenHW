@@ -1,0 +1,143 @@
+.tariff__title {
+  margin-bottom: 50px;
+}
+.tariff__tab-control {
+  display: flex;
+  gap: 40px;
+}
+.tariff__tab-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 235px;
+  width: 100%;
+}
+.tariff__tab-link {
+  font-family: "NT Somic Bold";
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  padding: 13px 30px;
+  border: 1px solid var(--silver);
+  border-radius: 30px;
+  color: #000000;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+}
+.tariff__tab-link:hover {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.tariff__tab-link--active {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: #ffffff;
+}
+.tariff__tab-link--active:hover {
+  color: #000000;
+}
+.tariffs__content-tab {
+  display: none;
+}
+
+.tariffs__content-tab--active {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.tariffs__content-tab-block {
+  padding: 0 55px;
+  display: flex;
+  flex-direction: column;
+  max-width: 508px;
+  max-height: 350px;
+  width: 100%;
+  background-color: var(--price);
+  border-radius: 10px;
+  box-shadow: 0px 0px 48px -30px #11ae8700;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  overflow: hidden;
+
+  position: relative;
+}
+.tariffs__content-tab-block:last-child {
+  background-color: var(--profi-price);
+}
+.tariffs__content-tab-block:hover {
+  box-shadow: 0px 0px 48px -5px #11ae8833;
+  background-color: var(--transperent-price);
+}
+.tariffs__content-price {
+  font-family: "NT Somic Bold";
+  font-size: 30px;
+  color: var(--secondary);
+  margin-bottom: 31px;
+}
+.tariffs__content-month-price {
+  font-size: 22px;
+  color: var(--md-dark);
+}
+.tariffs__content .btn {
+  font-size: 18px;
+  height: 48px;
+}
+
+.tariffs__content-tab-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "NT Somic Bold";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: var(--secondary);
+  border-bottom-left-radius: 10px;
+}
+/* ================= */
+
+@media (max-width: 1000px) {
+  .tariffs__content-tab--active {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tariffs__content-tab-block{
+    max-width: 700px;
+  }
+}
+@media (max-width: 900px) {
+  .tariff__tab-control {
+    gap: 20px;
+  }
+  .tariffs__content-price{
+    font-size: 24px;
+  }
+  .tariffs__content-month-price{
+    font-size: 18px;
+  }
+}
+@media (max-width: 740px) {
+  .tariff__tab-control {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 600px) {
+  .tariffs__content-price{
+    font-size: 20px;
+  }
+  .tariffs__content-month-price{
+    font-size: 16px;
+  }
+}
+@media (max-width: 528px) {
+  .tariff__tab-item{
+    max-width: 490px;
+  }
+}

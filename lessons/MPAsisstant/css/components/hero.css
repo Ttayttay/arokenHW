@@ -1,0 +1,79 @@
+.header__hero {
+  margin-top: 113px;
+  background: url(../../images/hero-bg.png) right no-repeat;
+  background-size: clamp(10vw, 35vw, 725px);
+}
+.header__hero-inner {
+  max-width: 973px;
+}
+.header__hero-title {
+  font-family: "NT Somic Bold";
+  font-size: clamp(28px, 6vw, 60px);
+}
+.header__hero-title-first {
+  color: var(--primary);
+}
+.header__hero-title-second {
+  color: var(--secondary);
+}
+.header__hero-marketplaces img {
+  width: clamp(64px, 10vw, 136px);
+  vertical-align: middle;
+}
+.header__hero-description {
+  margin-top: 55px;
+  margin-bottom: 61px;
+}
+
+.header__hero-try {
+  max-width: 782px;
+}
+
+.hero__deco_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero__deco_2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* ======================= */
+/* ==== МЕДИА ЗАПРОСЫ ==== */
+/* ======================= */
+
+@media (max-width: 1250px) {
+  .header__hero {
+    background: none;
+  }
+}
+@media (max-width: 990px) {
+  .header__hero {
+    margin-top: 80px;
+  }
+  .header__hero-description {
+    margin-top: 35px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 780px) {
+  .header__hero {
+    margin-top: 41px;
+  }
+  .header__hero-description {
+    margin-top: 26px;
+    margin-bottom: 40px;
+  }
+  .header__hero-try {
+    padding: 35px 20px 0;
+  }
+}
+@media (max-width: 600px) {
+
+  .hero__deco_2 {
+    display: none;
+  }
+}

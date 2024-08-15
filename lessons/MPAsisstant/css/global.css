@@ -1,0 +1,250 @@
+:root {
+  --primary: #2eb897;
+  --primary-gradient: #11ae88;
+  --profi-price: #11ae8733;
+  --price: #2a85ee28;
+  --transperent-price: #ffffff00;
+  --secondary: #2a84ee;
+  --md-secondary: #e8f2fc;
+  --ligth-secondary: #eaf3fd;
+  --black: #000;
+  --dark: #212121;
+  --tab-active: #f6faff;
+  --tab-priamry: #e8f2fc;
+  --md-dark: #6c778e;
+  --cadet-grey: #969eb1;
+  --silver: #c3c3c3;
+  --gainsboro: #d9d9d9;
+  --ligth-gainsboro: #dbe1e9;
+  --white: #fff;
+  --ghost-white: #f6faff;
+  --ligth-ghost-white: #f5fbff;
+  --lavender: #cedff4;
+  --wb: #702a8a;
+  --ozon: #1065ff;
+  --ligth-beige: #fff1d7;
+  --beige: #ffb57f;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5vw;
+}
+
+.body {
+  font-family: "NT Somic", sans-serif;
+  line-height: 1.25;
+  font-size: 18px;
+}
+
+.body--opened-menu {
+  overflow: hidden;
+}
+.open-reg {
+  overflow: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.open-entry {
+  overflow: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1568px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+.btn {
+  font-family: "NT Somic Bold";
+  text-align: center;
+  color: #ffffff;
+  padding: 9px 35px;
+  border-radius: 30px;
+  background: linear-gradient(125deg, var(--primary) 0%, var(--secondary) 100%);
+  cursor: pointer;
+  z-index: 0;
+  margin-bottom: 40px;
+
+  position: relative;
+}
+.btn > span {
+  position: relative;
+  z-index: 1;
+}
+.btn::after {
+  content: "";
+  font-family: "NT Somic Bold";
+  text-align: center;
+  color: #ffffff;
+  padding: 9px 35px;
+  border-radius: 30px;
+  background-color: #11ae8700;
+  opacity: 0;
+  background: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn:hover:after {
+  opacity: 1;
+}
+
+.btn-tariffs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  background: #ffffff00;
+  color: #000;
+  border: 1px solid var(--primary);
+}
+.btn-tariffs:hover {
+  color: #ffffff;
+}
+.btn-tariffs .btn-tariffs-svg path {
+  fill: var(--primary);
+}
+.btn-tariffs:hover .btn-tariffs-svg path {
+  fill: #ffffff;
+}
+.btn-tariffs-svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.title {
+  font-family: "NT Somic Bold";
+  font-size: 46px;
+  margin-bottom: 50px;
+}
+
+.second-title {
+  font-family: "NT Somic Bold";
+  margin: 0;
+  width: 917px;
+  font-size: clamp(1.5rem, 1.183rem + 1.41vw, 2.875rem);
+  line-height: 125%;
+  letter-spacing: 0.92px;
+  color: var(--dark);
+}
+
+.title__inblock {
+  font-family: "NT Somic Bold";
+  font-size: 30px;
+  margin: 35px 0;
+}
+.third-title {
+  font-family: "NT Somic Bold";
+  margin: 0;
+  font-size: clamp(1rem, 0.797rem + 0.9vw, 1.875rem);
+  line-height: 125%;
+  letter-spacing: 0.6px;
+  color: var(--dark);
+}
+.description {
+  font-size: clamp(18px, 3vw, 26px);
+  color: var(--md-dark);
+}
+
+.try {
+  padding: 50px 40px;
+  width: 100%;
+  background: linear-gradient(125deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 20px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+.try-text {
+  position: relative;
+  margin-bottom: 41px;
+  max-width: 542px;
+  width: 100%;
+  z-index: 1;
+}
+.try-form {
+  position: relative;
+  z-index: 1;
+}
+.try-input {
+  padding-left: 23px;
+  width: 100%;
+  font-size: 20px;
+  color: var(--cadet-grey);
+  height: 52px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.try-button {
+  font-size: 18px;
+  max-width: 264px;
+  width: 100%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+/* ======================= */
+/* ==== МЕДИА ЗАПРОСЫ ==== */
+/* ======================= */
+
+@media (max-width: 1100px) {
+  .title__inblock {
+    font-size: 22px;
+    margin: 25px 0 10px 0;
+  }
+  .second-title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    padding: 0 20px;
+  }
+  .try-button {
+    width: 30vw;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+  .title__inblock {
+    font-size: 16px;
+  }
+  .try-button {
+    position: inherit;
+    margin-top: 20px;
+
+    max-width: 100%;
+    width: 100%;
+    background: linear-gradient(
+      125deg,
+      var(--secondary) 0%,
+      var(--primary) 100%
+    );
+  }
+  .try-input {
+    margin-bottom: 0;
+  }
+  .second-title {
+    letter-spacing: 0.48px;
+  }
+  .third-title {
+    letter-spacing: 0.32px;
+  }
+}
